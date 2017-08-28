@@ -12,6 +12,21 @@
 
 }
 /************/
+/*
+.Кнопка {
+  border-width: 3px;
+  border-color: rgb(53, 199, 212);
+  border-style: solid;
+  border-radius: 4px;
+  position: absolute;
+  left: 1387px;
+  top: 32px;
+  width: 256px;
+  height: 60px;
+  z-index: 10;
+}
+*/
+
 /*Personal data block*/
 #app .personal-data{
   display: flex;
@@ -42,6 +57,29 @@
   }
 }
 
+.btn-callback{
+  border: 3px solid $secondary-color;
+  border-radius: 4px;
+  background: none;
+  padding: 10px 30px;
+  font-family: $primary-font;
+  font-weight: 600;
+  color: $main-font-color;
+  font-size: 17px;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  &::before{
+    font-family: FontAwesome;
+    content: '\f095';
+    padding-right: 5px;
+    position: relative;
+    top: 1px;
+  }
+  &:hover{
+    background-color: $secondary-color;
+  }
+}
+
 .btn{
   font-family: $headers-font-bold;
   background-color: rgb(96, 181, 126);
@@ -64,15 +102,6 @@
     outline: 0;
     -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125)
-  }
-  &--callback{
-    margin-left: auto;
-    font-size: 18px;
-    border-width: 2px;
-    padding: 12px 25px;
-    border-radius: 25px;
-    line-height: 20px;
-    flex: 1 15%;
   }
 
   &--download{

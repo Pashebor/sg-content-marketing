@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {showKnowDefaultForm, showModal} from '../actions/index';
 import { bindActionCreators } from 'redux';
+import NavBar from './NavBar.jsx';
 
 class HeaderContent extends Component{
     constructor(props) {
@@ -19,6 +20,7 @@ class HeaderContent extends Component{
         return(
             <section className="header-content-background">
                 <div className="content--background">
+                    <NavBar/>
                     <div className="container header__content">
                         <h1 className="header__content-title">КОМПЛЕКСНОЕ ПРОДВИЖЕНИЕ САЙТА В <span>ТОП-3</span> ЯНДЕКСА И GOOGLE</h1>
                         <h3 className="header__content-subtitle">Гарантированно приведем на Ваш сайт тысячи новых клиентов</h3>
