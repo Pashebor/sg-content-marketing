@@ -16,7 +16,7 @@
     }
   }
   &__title{
-    font-size: 23px;
+    font-size: 20px;
     color: $navbar-font-color;
     flex: 1 30%;
     font-family: $primary-font;
@@ -38,7 +38,7 @@
     a{
       display: block;
       color: $navbar-font-color;
-      font-size: 27px;
+      font-size: 24px;
       text-decoration: none;
       transition: all 0.3s ease-in-out;
       &:hover{
