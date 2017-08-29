@@ -1,13 +1,15 @@
 @import "../../components/main/content-marketing/c-marketing";
 @import "./../../components/main/approach/approach";
 @import "./../../components/main/recomendations/recomendations";
+@import "./../../components/main/materials-quality/m-quality";
 @import "./../../components/main/bring-clients/bring-clients";
 
 
 
 /*Result block START*/
 .results{
-  @extend .work-stages;
+  padding-top: 40px;
+  padding-bottom: 22px;
   position: relative;
   background-color: white;
 
@@ -39,7 +41,10 @@
         opacity: 1;
       }
     }
-
+    &-dots{
+      position: relative;
+      bottom: 10px;
+    }
     &-next{
       right: 1px;
       position: absolute;
@@ -114,7 +119,7 @@
 @media screen and (min-width: 1501px){
   .header{
     &__content{
-      padding: 200px 0 183px 0;
+      padding: 150px 0 163px 0;
       &-text:first-of-type{
         margin-top: 40px;
       }
@@ -125,7 +130,7 @@
 @media screen and (min-width: 1200px) and (max-width: 1500px){
   .header{
     &__content{
-      padding: 200px 0 183px 0;
+      padding: 100px 0 83px 0;
     }
   }
   .header-content-background{

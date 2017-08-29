@@ -41,14 +41,11 @@ class BringClients extends React.Component{
         return(
             <section className="b-clients">
                     <div className="container">
-                        <h2 className="b-clients__title">УЗНАЙТЕ, СКОЛЬКО КЛИЕНТОВ МОЖЕТ ПРИНОСИТЬ ВАШ САЙТ:</h2>
+                        <h2 className="title">СКОЛЬКО КЛИЕНТОВ ВЫ СМОЖЕТЕ ПОЛУЧАТЬ</h2>
                         {this.clientsNotification()}
                         <div className="b-clients__block">
                             <div className="b-clients__text">
-                                <p>Нет двух одинаковых сайтов, поэтому для каждого сайта мы делаем индивидуальный расчет!
-                                    Получите индивидуальное предложение, <strong>оставив заявку</strong> или позвонив по телефону: <a href="tel:8 800 333 12 93"><strong>8 800 333 12 93</strong></a>
-                                </p>
-                                <p>Это бесплатно и ни к чему Вас не обязывает</p>
+                                <p>Узнайте, насколько <span>будет эффективен</span> контент-маркетинг для Вашего бизнеса!</p>
                             </div>
                             <form className="form-group know-form" onSubmit={this.btnSubmitHandler.bind(this)}>
                                 <input className="form-control" placeholder="Имя *" type="text" ref="name" required/>
@@ -57,8 +54,9 @@ class BringClients extends React.Component{
                                     <MaskedInput mask="+7(111) 111 11 11" type="text" ref="phone" className="form-control" placeholder="Телефон *"  required/>
                                 }
                                 <ScrollableAnchor id={'how-many-clients'}>
-                                    <input type="submit" className="btn submit-btn"  value="Получить персональное предложение"/>
+                                    <input type="submit" className="button button--download"  value="УЗНАТЬ, СКОЛЬКО КЛИЕНТОВ Я ПОЛУЧУ"/>
                                 </ScrollableAnchor>
+                                <p className="b-clients__disclaimer">Это бесплатно и ни к чему Вас не обязывает *</p>
                             </form>
                         </div>
                     </div>

@@ -8,11 +8,13 @@
       margin: 55px auto 0 auto;
     }
     &-title{
-      font-size: 52px;
+      font-size: 42px;
+      width: 80%;
+      margin: auto;
       color: $main-font-color;
       text-transform: uppercase;
       font-weight: bold;
-      line-height: 60px;
+      line-height: normal;
       font-family: $primary-font;
       text-align: center;
       span{
@@ -21,7 +23,7 @@
     }
     &-subtitle{
       @extend .header__content-title;
-      font-size: 28px;
+      font-size: 26px;
       text-transform: none;
       margin-bottom: 23px;
       line-height: 35px;

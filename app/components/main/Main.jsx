@@ -5,6 +5,7 @@ import Recomendations from './recomendations/Recomendations';
 import BringClients from './bring-clients/BringClients';
 import Approach from './approach/Approach';
 import CMarketing from './content-marketing/CMarketing';
+import MQuality from './materials-quality/MQuality';
 
 class Main extends Component{
     render() {
@@ -13,6 +14,7 @@ class Main extends Component{
                <CMarketing/>
                <Approach/>
                <Recomendations/>
+               <MQuality/>
                <Results/>
                <BringClients/>
            </main>

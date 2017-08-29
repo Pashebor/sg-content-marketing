@@ -1,0 +1,30 @@
+.m-quality{
+  @extend .approach;
+  &-block{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    &__image{
+      width: 30%;
+    }
+    &__desc{
+      width: 70%;
+      h2{
+        font-weight: 600;
+        font-size: 22px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      p{
+        @include subtitle-text;
+        color: $navbar-font-color;
+        text-align: center;
+        margin: auto;
+        width: 68%;
+      }
+    }
+  }
+}
