@@ -3,19 +3,20 @@
   position: relative;
   &__content{
     padding: 50px 0 0 0;
-    text-shadow: rgba(0, 0, 0, 0.5) 1px 3px 2px;
-    .btn{
+    .button{
       display: block;
       margin: 55px auto 0 auto;
     }
     &-title{
-      font-size: 32px;
+      font-size: 52px;
+      color: $main-font-color;
       text-transform: uppercase;
       font-weight: bold;
-      font-family: $headers-font-regular;
+      line-height: 60px;
+      font-family: $primary-font;
       text-align: center;
       span{
-        color: rgb(144, 200, 249);
+        color: $secondary-color;
       }
     }
     &-subtitle{
@@ -23,7 +24,8 @@
       font-size: 28px;
       text-transform: none;
       margin-bottom: 23px;
-      margin-top: 15px;
+      line-height: 35px;
+      margin-top: 20px;
     }
     &-text{
       text-align: center;

@@ -48,7 +48,9 @@
 
 $primary-font: OpenSansLight;
 $main-font-color: #353434;
+$navbar-font-color: #848484;
 $secondary-color: rgb(53, 199, 212);
+$third-color: #97c89a;
 $headers-font-regular: OpenSansRegular;
 $headers-font-bold: OpenSansBold;
 $secondary-font: "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -59,6 +61,19 @@ $seo-font-bold: RobotoSlabBold;
   text-shadow: rgba(0,0,0,.5) 1px 0 0;
 }
 
+@mixin content-text() {
+  font-family: $headers-font-regular;
+  font-weight: 600;
+  font-size: 16px;
+  color: $navbar-font-color;
+}
+
+@mixin subtitle-text() {
+  font-family: $headers-font-regular;
+  font-weight: 600;
+  font-size: 17px;
+  color: $main-font-color;
+}
 
 body{
   font-family: $primary-font;

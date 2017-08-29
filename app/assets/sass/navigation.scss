@@ -10,7 +10,6 @@
     img{
       width: 200px;
       height: 61px;
-      filter: grayscale(100%);
     }
     &:hover{
       transform: scale(1.05);
@@ -18,7 +17,7 @@
   }
   &__title{
     font-size: 23px;
-    color: $main-font-color;
+    color: $navbar-font-color;
     flex: 1 30%;
     font-family: $primary-font;
     align-self: flex-start;
@@ -38,7 +37,7 @@
     font-weight: 600;
     a{
       display: block;
-      color: $main-font-color;
+      color: $navbar-font-color;
       font-size: 27px;
       text-decoration: none;
       transition: all 0.3s ease-in-out;
