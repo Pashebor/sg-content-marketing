@@ -1,6 +1,19 @@
 .b-clients{
   @extend .m-quality;
-
+  .title{
+    position: relative;
+    &::after {
+      position: absolute;
+      display: block;
+      right: 17%;
+      top: 15px;
+      content: '';
+      background: url('../images/round-arrow.png') no-repeat;
+      background-size: contain;
+      width: 40px;
+      height: 90px;
+    }
+  }
   &__block{
     display: flex;
     flex-flow: row wrap;
@@ -9,6 +22,8 @@
     width: 68%;
   }
   &__text{
+    position: relative;
+    right: 4%;
     width: 50%;
     font-size: 16px;
     padding: 0 20px;
@@ -34,6 +49,8 @@
   }
 
   .know-form{
+    position: relative;
+    right: 4%;
     display: block;
     width: 45%;
     margin: 0;
@@ -58,4 +75,5 @@
       margin-left: 0 !important;
     }
   }
+
 }
