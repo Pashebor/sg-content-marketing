@@ -1,16 +1,9 @@
-@import "./../../components/main/guarantees/guarantees";
-@import "./../../components/main/work-stages/work-stages";
-@import "./../../components/main/what-do-you-get/what-do-you-get";
-@import "./../../components/main/recomendations/recomendations";
-@import "./../../components/main/clients-words/clients-words";
-@import "./../../components/main/facts/facts";
-@import "./../../components/main/bring-clients/bring-clients";
-@import "./../../components/main/key-digits/key-digits";
+@import "../../components/main/content-marketing/c-marketing";
 @import "./../../components/main/approach/approach";
+@import "./../../components/main/recomendations/recomendations";
+@import "./../../components/main/bring-clients/bring-clients";
 
-.main{
-  margin: 40px 0 0 0;
-}
+
 
 /*Result block START*/
 .results{
@@ -18,7 +11,7 @@
   position: relative;
   background-color: white;
 
-  .btn{
+  .button{
     display: block;
     margin: 26px auto 0 auto;
   }
@@ -59,11 +52,6 @@
     }
   }
 
-  &__title{
-    @extend .work-stages__title;
-    margin-top: 0;
-    margin-bottom: 20px;
-  }
   &__subtitle{
     font-family: $headers-font-regular;
     font-size: 17px;
@@ -76,7 +64,7 @@
   }
   &-info{
     &__row{
-      @extend .guarantees-info;
+      display: flex;
       flex-flow: row;
       justify-content: space-between;
       width: 100%;
@@ -131,11 +119,6 @@
         margin-top: 40px;
       }
     }
-  }
-  .header-content-background{
-    /*background-position: center center;*/
-    background-size: cover;
-    background-position: 50% 27%;
   }
 }
 

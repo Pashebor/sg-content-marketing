@@ -77,7 +77,7 @@ class Result extends Component{
 
         <section className="results">
                 <div className="container">
-                    <h2 className="results__title">РЕЗУЛЬТАТЫ НАШЕЙ РАБОТЫ</h2>
+                    <h2 className="title">РЕЗУЛЬТАТЫ НАШЕЙ РАБОТЫ</h2>
                     <p className="results__subtitle">МЫ ЗНАЕМ, КАК СДЕЛАТЬ ИЗ МАЛОГО БИЗНЕСА КРУПНЫЙ</p>
                     <ScrollableAnchor id={'results'}>
                     <Slider {...settings}>

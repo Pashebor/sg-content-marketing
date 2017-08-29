@@ -33,11 +33,13 @@ class Approach extends React.Component{
 
     approachItems() {
         const items = [0, 1, 2, 3, 4, 5, 6],
-            text = ['Окупаемость вложений', 'Конкретный результат', 'Мы берем не всех', 'Масштабирование вашего бизнеса', 'Сущность потребностей ЦА', 'Уникальная методика', 'Погружение в бизнес клиента'],
-            images = ['bag', 'aim', 'phone', 'planet', 'quest', 'wood', 'search'];
+            text = ['Анализ специфики бизнеса', 'Анализ Ваших конкурентов', 'Составление семантического ядра', 'Разработка  контент-стратегии', 'Написание экспертных статей', 'SEO-оптимизация текстов', 'Верстка статей на сайте'],
+            images = ['stats', 'concurent-analize', 'molecule', 'list', 'taking-notes', 'text-optimaze', 'folded-newspaper'];
         return items.map((item, i) => {
             return (<div key={item} className={`approach-types__item ${this.props.approachesState === item ? ' approach-types__item--active': ''}`}  ref={`paginator${item}`} >
-                <img value={item} onMouseEnter={this.hoverPaginHandler} src={`images/${images[i]}${this.props.approachesState === item ? '-green' : "-blue"}.svg`} alt="" title="" />
+                <figcaption value={item} onMouseEnter={this.hoverPaginHandler}>
+                    <img value={item} onMouseEnter={this.hoverPaginHandler} src={`images/${images[i]}${this.props.approachesState === item ? '-green' : "-blue"}.svg`} alt="" title="" />
+                </figcaption>
                 <p value={item} onMouseEnter={this.hoverPaginHandler}>{text[i]}</p>
             </div>);
         })
@@ -90,41 +92,42 @@ class Approach extends React.Component{
         return(
             <section className="approach">
                 <div className="container">
-                    <h2 className="approach__title">Ключевые принципы нашего подхода</h2>
+                    <h2 className="title">КАК БУДЕТ СТРОИТЬСЯ РАБОТА НАД САЙТОМ</h2>
                     <div className="approach-types">
                       <div className="approach-types-wrapper">
                           {this.approachItems()}
                       </div>
                     </div>
                     <div className="approach-slider">
-                        <div className="approach-slider__nav" onClick={this.previousHandler}><img src="images/arrow-prev.svg"/></div>
+                        <div className="approach-slider__nav" onClick={this.previousHandler}><div className="arrow-block"><img src="images/arrow-prev.svg"/></div></div>
                         <div className="approach-slider__block">
                     <Slider ref='slider' {...settings}>
                         <div className="approach-slider__item">
-                            <p><strong>Окупаемость вложений</strong> клиента для нас святое. Именно с расчета окупаемости для клиента мы начинаем любой проект.</p>
+                            <p>Мы проводим комплексное маркетинговое исследование Вашего бизнеса (более 40 параметров, которые разработаны под Вашу отрасль бизнеса).</p>
                         </div>
                         <div className="approach-slider__item">
-                            <p><strong>Конкретный результат</strong> мы прописываем в договоре и несём за это финансовую ответственность. Проще говоря, мы вернём Вам все деньги, если результат не будет достигнут.</p>
+                            <p>Определяем Ваших главных конкурентов (не менее 3). Проводим глубокий сравнительный анализ для выявления Ваших конкурентных преимуществ.</p>
                         </div>
                         <div className="approach-slider__item">
-                            <p><strong>50% наших потенциальных клиентов получают отказ</strong>, потому что у нас нет 95%-ой уверенности в том, что вложения этих клиентов отобьются. Да, это больно по нам бьёт, но так - правильно.</p>
+                            <p>Подбираем слова, отражающие тематику сайта. Проверяем конкурентность  ключевых фраз. Рассчитываем их эффективность. Составляем финальное семантическое ядро.</p>
                         </div>
                         <div className="approach-slider__item">
-                            <p><strong>Масштабирование Вашего бизнеса,</strong> а не трафик или лиды - цель нашей деятельности.</p>
+                            <p>Составляем контент-план для дальнейшего продвижения Вашего сайта, постоянно контролируя его эффективность. Вносим соответствующие коррективы.</p>
                         </div>
                         <div className="approach-slider__item">
-                            <p><strong>Сущность потребностей ЦА,</strong> а не список запросов для продвижения позволяют обеспечивать рост не только Вашего сайта, но и бизнеса.</p>
+                            <p>Мы создаем «правильный» контент, который соответствует последним требованиям SEO, но в первую очередь интересен и полезен Вашей целевой аудитории.</p>
                         </div>
                         <div className="approach-slider__item">
-                            <p><strong>Уникальная методика</strong> работы с контентом и сайтом позволяет нам делать средний рост органического трафика в 763 %. Да, мы готовы это подтвердить.</p>
+                            <p>Оптимизируем экспертные статьи для поисковых систем. Наполняем их ключевыми словами, важными для продвижения Вашей страницы.</p>
                         </div>
                         <div className="approach-slider__item">
-                            <p><strong>Погружение в бизнес клиента</strong> позволяет нам предлагать наиболее оптимальные решения. Это требует большой вовлечённости и работы как с нашей стороны, так и со стороны клиента. Не все к этому готовы, но оно того стоит.</p>
+                            <p>Качественно оформляем контент на сайте. Настраиваем внутреннюю перелинковку статей. Настраиваем правильное отображение статей во всех популярных браузерах.</p>
                         </div>
                     </Slider>
                         </div>
-                        <div className="approach-slider__nav" onClick={this.nextHandler}><img src="images/arrow-next.svg" /></div>
+                        <div className="approach-slider__nav" onClick={this.nextHandler}><div className="arrow-block"><img src="images/arrow-next.svg" /></div></div>
                     </div>
+                    <button className="button button--download">СКАЧАТЬ ПРИМЕР ПЛАНА РАБОТ НА 2 МЕСЯЦА <br/> <span>PDF 2.21 МБ</span></button>
                 </div>
             </section>
         )

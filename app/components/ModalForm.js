@@ -108,6 +108,17 @@ class ModalForm extends Component{
         e.stopPropagation();
         this.props.showModal(true);
     }
+
+    bitrixShit() {
+        (function(w,d,u,b){w['Bitrix24FormObject']=b;w[b] = w[b] || function(){arguments[0].ref=u;
+                (w[b].forms=w[b].forms||[]).push(arguments[0])};
+            if(w[b]['forms']) return;
+            let s=d.createElement('script'); let r=1*new Date();s.async=1;s.src=u+'?'+r;
+            let h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://gpro.bitrix24.ru/bitrix/js/crm/form_loader.js','b24form');
+
+        b24form({"id":"13","lang":"ru","sec":"b1f2od","type":"inline"});
+    }
     formVariants() {
         if (this.props.formState.contract) {
             return(
@@ -152,7 +163,9 @@ class ModalForm extends Component{
                         <input type="email" ref="email" name="email" className="form-control" required="true" placeholder="example@mail.ru"/>
                         <label>Телефон <span>*</span></label>
                         <MaskedInput  mask="+7(111) 111 11 11" type="text" ref="phone" name="phone" required="true" className="form-control"/>
+
                         {this.personalAgreement()}
+
                         <input type="submit" value='Отправить заявку' className="btn"/>
                     </form>
                 </div>
@@ -162,17 +175,9 @@ class ModalForm extends Component{
                 <div className="popup-form">
                     <div className="popup-form__close" onClick={this.closeModalHandler.bind(this)}>&times;</div>
                     <p>Узнать сколько клиентов мы можем привести Вам на сайт</p>
-                    {this.mailNotification()}
-                    <form className="form-group" onClick={this.formClickHandler.bind(this)} onSubmit={this.btnSubmitHandler.bind(this)}>
-                        <label>Как к Вам обращаться?<span>*</span></label>
-                        <input  type="text" ref="name" name="name" className="form-control" placeholder="Иванов Иван Иванович" required/>
-                        <label>Телефон <span>*</span></label>
-                        <MaskedInput  mask="+7(111) 111 11 11" type="text" ref="phone" name="phone" required="true" className="form-control"/>
-                        <label>Комментарий</label>
-                        <textarea className="form-control" name="comment" ref="comment" placeholder="Мой сайт www.mysite.ru. Прошу связаться со мной в 14:30."></textarea>
-                        {this.personalAgreement()}
-                        <input type="submit" value='Отправить заявку' className="btn"/>
-                    </form>
+                    <script id="bx24_form_inline" data-skip-moving="true" type="text/javascript">
+                    {this.bitrixShit()}
+                    </script>
                 </div>
             )
         } else {

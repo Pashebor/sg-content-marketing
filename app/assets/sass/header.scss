@@ -1,23 +1,22 @@
-$header-text-color: rgb(255, 255, 255);
-
 .header{
   background-color: rgb(25, 25, 25);
   position: relative;
   &__content{
     padding: 50px 0 0 0;
-    text-shadow: rgba(0, 0, 0, 0.5) 1px 3px 2px;
-    .btn{
+    .button{
       display: block;
       margin: 55px auto 0 auto;
     }
     &-title{
-      font-size: 32px;
+      font-size: 52px;
+      color: $main-font-color;
       text-transform: uppercase;
       font-weight: bold;
-      font-family: $headers-font-regular;
+      line-height: 60px;
+      font-family: $primary-font;
       text-align: center;
       span{
-        color: rgb(144, 200, 249);
+        color: $secondary-color;
       }
     }
     &-subtitle{
@@ -25,7 +24,8 @@ $header-text-color: rgb(255, 255, 255);
       font-size: 28px;
       text-transform: none;
       margin-bottom: 23px;
-      margin-top: 15px;
+      line-height: 35px;
+      margin-top: 20px;
     }
     &-text{
       text-align: center;
@@ -36,8 +36,7 @@ $header-text-color: rgb(255, 255, 255);
 
 .content{
   &--background{
-    background: /*linear-gradient(to bottom, rgba(20, 20, 20, 0), rgba(20, 20, 20, 0.85) 100%),*/ radial-gradient(at top, rgba(20, 20, 20, 0), rgba(20, 20, 20, 0.85) 75%);
-    background-position: center center;
+    background-color: rgba(255,255,255, 0.83);
     padding-bottom: 43px;
   }
 }
@@ -47,7 +46,7 @@ $header-text-color: rgb(255, 255, 255);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  color: $header-text-color;
+  color: $main-font-color;
   background-color: black;
 }
 

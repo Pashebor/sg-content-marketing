@@ -18,37 +18,37 @@ class Recomendations extends Component{
             <ScrollableAnchor id={'recomendations'}>
                 <section className="recomendations">
                     <div className="container">
-                        <h2 className="recomendations__title">ПОЧЕМУ 87% КЛИЕНТОВ ПРИХОДЯТ К НАМ ПО РЕКОМЕНДАЦИИ</h2>
+                        <h2 className="title">ПРЕИМУЩЕСТВА КОНТЕНТ-МАРКЕТИНГА</h2>
                         <div className="recomendations-info">
                             <div className="recomendations-info__item">
-                                <img src="images/cash-back.svg" alt="ВОЗВРАТ ИНВЕСТИЦИЙ" title="ВОЗВРАТ ИНВЕСТИЦИЙ" data-audit="ВОЗВРАТ ИНВЕСТИЦИЙ" onClick={this.callPopupHandler}/>
-                                <h4>ВОЗВРАТ ИНВЕСТИЦИЙ</h4>
-                                <p>Мы рассчитываем окупаемость инвестиций для каждого проекта</p>
+                                <img src="images/stack-of-coins.svg" alt="ВОЗВРАТ ИНВЕСТИЦИЙ" title="ВОЗВРАТ ИНВЕСТИЦИЙ" data-audit="ВОЗВРАТ ИНВЕСТИЦИЙ" onClick={this.callPopupHandler}/>
+                                <h4>НИЗКАЯ СТОИМОСТЬ</h4>
+                                <p>Стоимость привлечения лида с помощью контент-маркетинга меньше, чем у классических способов рекламы</p>
                             </div>
                             <div className="recomendations-info__item">
-                                <img src="images/specific-result.svg" alt="КОНКРЕТНЫЙ РЕЗУЛЬТАТ" title="КОНКРЕТНЫЙ РЕЗУЛЬТАТ" data-audit="КОНКРЕТНЫЙ РЕЗУЛЬТАТ" onClick={this.callPopupHandler}/>
-                                <h4>КОНКРЕТНЫЙ РЕЗУЛЬТАТ</h4>
-                                <p>Прописываем в договоре <br/> результат по трафику</p>
+                                <img src="images/changing-money.svg" alt="КОНКРЕТНЫЙ РЕЗУЛЬТАТ" title="КОНКРЕТНЫЙ РЕЗУЛЬТАТ" data-audit="КОНКРЕТНЫЙ РЕЗУЛЬТАТ" onClick={this.callPopupHandler}/>
+                                <h4>ВЫСОКАЯ ОКУПАЕМОСТЬ</h4>
+                                <p>Как показывает статистика, средний показатель возврата инвестиций у наших клиентов — 320%</p>
                             </div>
                             <div className="recomendations-info__item">
-                                <img src="images/specialists-team.svg" alt="КОМАНДА СПЕЦИАЛИСТОВ" title="КОМАНДА СПЕЦИАЛИСТОВ"  data-audit="КОМАНДА СПЕЦИАЛИСТОВ" onClick={this.callPopupHandler}/>
-                                <h4>КОМАНДА СПЕЦИАЛИСТОВ</h4>
-                                <p>Над Вашим сайтом будет работать группа от 5 до 9 специалистов</p>
+                                <img src="images/shield.svg" alt="КОМАНДА СПЕЦИАЛИСТОВ" title="КОМАНДА СПЕЦИАЛИСТОВ"  data-audit="КОМАНДА СПЕЦИАЛИСТОВ" onClick={this.callPopupHandler}/>
+                                <h4>ГАРАНТИЯ РЕЗУЛЬТАТА</h4>
+                                <p>Мы даем юридическую гарантию на весь объем выполняемых работ. Результаты зафиксированы в договоре</p>
                             </div>
                             <div className="recomendations-info__item">
-                                <img src="images/aim-auditory.svg" alt="ТОЛЬКО ЦЕЛЕВАЯ АУДИТОРИЯ" title="ТОЛЬКО ЦЕЛЕВАЯ АУДИТОРИЯ"  data-audit="ТОЛЬКО ЦЕЛЕВАЯ АУДИТОРИЯ" onClick={this.callPopupHandler}/>
-                                <h4>ТОЛЬКО ЦЕЛЕВАЯ АУДИТОРИЯ</h4>
-                                <p>Продвижение только по целевым запросам, согласованным с Вами</p>
+                                <img src="images/clock.svg" alt="ТОЛЬКО ЦЕЛЕВАЯ АУДИТОРИЯ" title="ТОЛЬКО ЦЕЛЕВАЯ АУДИТОРИЯ"  data-audit="ТОЛЬКО ЦЕЛЕВАЯ АУДИТОРИЯ" onClick={this.callPopupHandler}/>
+                                <h4>ДОЛГОСРОЧНЫЙ ЭФФЕКТ</h4>
+                                <p>Размещенный контент останется на вашем сайте навсегда, а значит, каждый день он будет привлекать новых клиентов</p>
                             </div>
                             <div className="recomendations-info__item">
-                                <img src="images/wallet.svg" alt="ИНДИВИДУАЛЬНЫЙ ПОДХОД" title="ИНДИВИДУАЛЬНЫЙ ПОДХОД"  data-audit="ИНДИВИДУАЛЬНЫЙ ПОДХОД" onClick={this.callPopupHandler}/>
-                                <h4>ВОЗМОЖНОСТЬ ДЛЯ МАЛОГО БИЗНЕСА</h4>
-                                <p>Мы работаем с проектами <br/> от <strong>35</strong> тыс. рублей</p>
+                                <img src="images/statistic.svg" alt="ИНДИВИДУАЛЬНЫЙ ПОДХОД" title="ИНДИВИДУАЛЬНЫЙ ПОДХОД"  data-audit="ИНДИВИДУАЛЬНЫЙ ПОДХОД" onClick={this.callPopupHandler}/>
+                                <h4>МАСШТАБИРОВАНИЕ БИЗНЕСА</h4>
+                                <p>Главная цель контент-маркетинга масштабирование Вашего бизнеса, а не трафик или лиды</p>
                             </div>
                             <div className="recomendations-info__item">
-                                <img src="images/key-site.svg" alt="РАБОТА НАД САЙТОМ ПОД КЛЮЧ" title="РАБОТА НАД САЙТОМ ПОД КЛЮЧ"  data-audit="РАБОТА НАД САЙТОМ ПОД КЛЮЧ" onClick={this.callPopupHandler}/>
-                                <h4>РАБОТА НАД САЙТОМ ПОД КЛЮЧ</h4>
-                                <p>Вы забываете о сайте <br/> и просто получаете заявки</p>
+                                <img src="images/like.svg" alt="РАБОТА НАД САЙТОМ ПОД КЛЮЧ" title="РАБОТА НАД САЙТОМ ПОД КЛЮЧ"  data-audit="РАБОТА НАД САЙТОМ ПОД КЛЮЧ" onClick={this.callPopupHandler}/>
+                                <h4>ПОЗИТИВНАЯ РЕАКЦИЯ КЛИЕНТОВ</h4>
+                                <p>Не является прямой рекламой и благосклонно воспринимается пользователями интернета</p>
                             </div>
                         </div>
                     </div>
