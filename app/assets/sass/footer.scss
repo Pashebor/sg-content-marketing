@@ -1,46 +1,47 @@
 .footer{
    position: relative;
-   background-color: rgb(9, 9, 13);
+   background-color: #403f3f;
    color: white;
 
-  &__address{
-    flex: 2;
-  }
-  &__logo{
-    transition: all 0.3s ease-in-out;
-    flex: 1;
-    img{
-      width: 200px;
-      height: 61px;
-    }
+  a{
+    color: white;
+    text-decoration: none;
     &:hover{
-      transform: scale(1.05);
+      color: $secondary-color;
     }
   }
-  &__phone{
-    flex: 1;
-    a{
-      font-size: 25px;
-      text-decoration: none;
+
+  &__link{
+    font-size: 18px;
+    color: white;
+    font-family: $headers-font-bold;
+    margin-top: 15px;
+   }
+
+  &__quest{
+    text-align: right;
+    p{
+      @include content-text;
       color: white;
-      position: relative;
-      top: -10px;
-      transition: all 0.3s ease-in-out;
-      &:hover{
-          text-shadow: 0px 0px 2px white;
-      }
+      text-align: right;
+      font-size: 15px;
+      font-weight: 100;
+      margin: 0;
+    }
+    a{
+      text-align: right;
+      @include content-text;
+      font-size: 17px;
+      color: white;
     }
   }
-  @each $footer-item in (__logo,__address,__phone) {
-    &#{$footer-item}{
-      text-align: center;
-    }
-  }
+
    &-container{
-     margin-top: 60px;
+     margin: 20px 0;
      display: flex;
      flex-direction: row;
      justify-content: space-between;
+     padding: 0 3%;
    }
 
   .top-button-block{

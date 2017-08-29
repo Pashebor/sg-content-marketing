@@ -47,7 +47,7 @@ class Result extends Component{
 
     render() {
         const settings = {
-            dots: false,
+            dots: true,
             infinite: true,
             speed: 500,
             autoplaySpeed: 5000,
@@ -77,8 +77,7 @@ class Result extends Component{
 
         <section className="results">
                 <div className="container">
-                    <h2 className="title">РЕЗУЛЬТАТЫ НАШЕЙ РАБОТЫ</h2>
-                    <p className="results__subtitle">МЫ ЗНАЕМ, КАК СДЕЛАТЬ ИЗ МАЛОГО БИЗНЕСА КРУПНЫЙ</p>
+                    <h2 className="title">МЫ ЛЮБИМ СЛОЖНЫЕ ЗАДАЧИ И ГОРДИМСЯ НАШИМИ РЕЗУЛЬТАТАМИ</h2>
                     <ScrollableAnchor id={'results'}>
                     <Slider {...settings}>
                         <div>
@@ -139,7 +138,6 @@ class Result extends Component{
                     </div>
                     </Slider>
                 </ScrollableAnchor>
-                    <button className="btn" onClick={this.openKnowFormHandler}>Узнать, сколько клиентов я получу</button>
                 </div>
         </section>
     );
