@@ -32,37 +32,31 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (!empty($arrRequest)) {
      switch ($arrRequest['form-name']) {
       case 'callback':
-       $mail->Subject = 'Заказ аудита - обратный звонок "Комплексное продвиженике"';
+       $mail->Subject = 'Заказ обратного звонока - "Контент-маркетинг"';
        $mail->Body = '<div><p>Имя клиента: '.$arrRequest['name'].'</p><p>Номер телефона: '.$arrRequest['phone'].'</p><p>Комментарий: '.$arrRequest['comment'].'</p></div>';
        $mail->send();
        echo json_encode(["response" => true]);
              break;
        case 'know-default':
-           $mail->Subject = 'Узнать сколько клиентов мы можем привести Вам на сайт - "Комплексное продвиженике"';
+           $mail->Subject = 'Заказ контент-маркетинга - "Контент-маркетинг"';
            $mail->Body = '<div><p>Имя клиента: '.$arrRequest['name'].'</p><p>Номер телефона: '.$arrRequest['phone'].'</p><p>Комментарий: '.$arrRequest['comment'].'</p></div>';
            $mail->send();
            echo json_encode(["response" => true]);
            break;
-       case 'contract-order':
-           $mail->Subject = 'Заказ примера договора из комплексного продвижения';
-           $mail->Body = '<div><p>Электронная почта клиента: '.$arrRequest['email'].'</p><p>Номер телефона: '.$arrRequest['phone'].'</p></div>';
-           $mail->send();
-           echo json_encode(["response" => true]);
-             break;
        case 'work-plan-order':
-           $mail->Subject = 'Заказ примера плана работ из комплексного продвижения';
+           $mail->Subject = 'Заказ примера плана работ - "Контент-маркетинг"';
            $mail->Body = '<div><p>Электронная почта клиента: '.$arrRequest['email'].'</p><p>Номер телефона: '.$arrRequest['phone'].'</p></div>';
            $mail->send();
            echo json_encode(["response" => true]);
              break;
          case 'report-order':
-             $mail->Subject = 'Заказ примера нашего отчета - "Комплексное продвижение"';
+             $mail->Subject = 'Заказ примера наших статей - "Контент-маркетинг"';
              $mail->Body = '<div><p>Электронная почта клиента: '.$arrRequest['email'].'</p><p>Номер телефона: '.$arrRequest['phone'].'</p></div>';
              $mail->send();
              echo json_encode(["response" => true]);
              break;
          case 'know-bottom':
-             $mail->Subject = 'Заказ аудита - Футер "Комплексное продвиженике"';
+             $mail->Subject = 'Заказ количества клиентов - Футер "Контент-маркетинг"';
              $mail->Body = '<div><p>Имя клиента: '.$arrRequest['name'].'</p><p>Номер телефона: '.$arrRequest['phone'].'</p></div>';
              $mail->send();
            echo json_encode(["response" => true]);

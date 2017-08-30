@@ -50,12 +50,7 @@ class MobileModalForms extends Component{
         e.preventDefault();
         let formData = {'form-name': 'callback'};
 
-        if (this.props.formState.contract) {
-            formData['form-name'] = 'contract-order';
-            formData.email = this.refs.email.value;
-            formData.phone = this.refs.phone.value;
-            this.props.sendCallback(formData);
-        } else if (this.props.formState.workPlan) {
+        if (this.props.formState.workPlan) {
             formData['form-name'] = 'work-plan-order';
             formData.email = this.refs.email.value;
             formData.phone = this.refs.phone.value;
@@ -144,7 +139,7 @@ class MobileModalForms extends Component{
             return(
                 <div className="popup-form">
                     <div className="popup-form__close" onClick={this.closeModalHandler.bind(this)}>&times;</div>
-                    <p>Чтобы получить пример нашего отчета,  оставьте,  пожалуйста,  свои контактные данные</p>
+                    <p>Чтобы получить пример наших статьей,  оставьте,  пожалуйста,  свои контактные данные</p>
                     {this.mailNotification()}
                     <form className="form-group" onClick={this.formClickHandler.bind(this)} onSubmit={this.btnSubmitHandler.bind(this)}>
                         <label>Ваш Email <span>*</span></label>
@@ -160,7 +155,7 @@ class MobileModalForms extends Component{
             return(
                 <div className="popup-form">
                     <div className="popup-form__close" onClick={this.closeModalHandler.bind(this)}>&times;</div>
-                    <p>Узнать сколько клиентов мы можем привести Вам на сайт</p>
+                    <p>Заказ контент-маркетинга</p>
                     {this.mailNotification()}
                     <form className="form-group" onClick={this.formClickHandler.bind(this)} onSubmit={this.btnSubmitHandler.bind(this)}>
                         <label>Как к Вам обращаться?<span>*</span></label>

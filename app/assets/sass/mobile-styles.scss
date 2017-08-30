@@ -1,23 +1,39 @@
-@media screen and (min-width: 320px) and (max-width: 500px) {
-  .btn--callback{
-    margin-left: 0px;
-    margin-top: 20px;
-    margin-bottom: 10px;
+@media screen and (min-width: 320px) and (max-width: 600px) {
+  .title{
+    font-size: 20px;
+  }
+  .button{
+    height: auto;
+    white-space: normal;
   }
   .content--background{
-    background: rgba(20, 20, 20, 0.81);
+    background: rgba(255,255,255, 0.83);
   }
-  .header, .work-stages, .guarantees, .wdyg, .cl-words, .results, .recomendations, .b-clients, .facts{
+  .header, .results, .recomendations, .b-clients {
     overflow: hidden;
   }
-  .work-stages, .guarantees, .wdyg, .results, .cl-words, .recomendations, .b-clients, .facts{
+  .results, .recomendations, .b-clients, .approach, .c-marketing{
     padding-top: 30px;
   }
 
-  .wdyg{
-    padding: 40px 10px;
+  .c-marketing{
+    &-desc{
+      width: 95%;
+      padding: 15px 20px 15px;
+      &__title{
+        position: relative;
+        top: 0;
+        left: 0;
+        font-size: 20px;
+      }
+      &__text{
+        width: 90%;
+        &::before{
+          display: none;
+        }
+      }
+    }
   }
-
   .approach{
     padding-bottom: 15px;
     .slick-slide{
@@ -25,25 +41,33 @@
     }
     &-types{
       background: none;
-      margin-bottom: 10px;
+      margin: 0;
       &-wrapper{
         flex-flow: row wrap;
-        justify-content: space-around;
+        justify-content: space-between;
+        width: 90%;
       }
       &__item{
-        width: 45%;
-        @for $item from 1 through 7 {
-          &:nth-child(#{$item}) {
-            position: static;
+        width: 50%;
+
+        @each $pseudo in (after, before) {
+          &:nth-child(2n)::#{$pseudo}{
+            display: none;
           }
         }
+
+        &:nth-child(2n){
+          top: 0;
+        }
+
         img{
-          width: 74px;
-          height: 74px;
+          width: 64%;
+          height: 64%;
         }
       }
     }
     &-slider{
+      width: 100%;
       &__nav{
         display: none;
       }
@@ -89,21 +113,28 @@
 
   .header{
     &__content{
-      padding: 20px 15px 0 15px;
+      padding: 10px 10px 0 10px;
       &-title{
         font-size: 20px;
         text-align: center;
         line-height: 30px;
+      }
+      &-subtitle{
+        font-size: 17px;
       }
       &-text{
         text-align: center;
         padding: 0 10px;
         font-size: 20px;
       }
+      .button{
+        margin: 20px auto 0 auto;
+      }
     }
+
     &-content-background{
       background-size: cover;
-      background: url("../images/headerbackground.png") no-repeat 70% 50%;
+      background: url("../images/headerbackground.jpg") no-repeat 10%;
     }
   }
   .know-form{
@@ -138,99 +169,7 @@
     }
   }
 
-  .guarantees{
-    &__title{
-      font-size: 20px;
-      line-height: 25px;
-    }
-    &-info{
-      flex-flow: column;
-      margin: 20px 0 0 0;
-      padding: 20px 0;
-      &__item{
-        width: 100%;
-        align-self: center;
-      }
-    }
-  }
 
-  .work-stages{
-    .btn{
-      white-space: normal;
-    }
-  }
-  .stage-count:nth-child(2n+1){
-    .stage{
-      .stage__description{
-        flex-flow: column;
-      }
-    }
-  }
-  .stage-count{
-    .stage{
-      padding: 0 5px;
-      .stage__description{
-        flex-flow: column;
-        ul{
-          width: 100%;
-        }
-        figure{
-          width: 100%;
-          img{
-            width: 95%;
-          }
-        }
-      }
-    }
-  }
-
-  .stages{
-    padding: 0;
-    &-links {
-      flex: 1 100%;
-      &__item{
-        font-size: 16px;
-        strong{
-          font-size: 20px;
-        }
-        &--active{
-          background-color: #EBEBEB;
-          border-right: none;
-          p::after{
-            display: none;
-          }
-          &::after{
-            display: none;
-          }
-        }
-    }
-    }
-    &__description {
-      flex: 1 100%;
-      height: auto;
-      &-wrapper{
-        margin-top: 15px;
-        width: 100%;
-      }
-    }
-  }
-
-  .key-digits{
-    .digits{
-      &__item{
-        width: 100%;
-      }
-    }
-  }
-
-  .insurance{
-    &__wrapper{
-      padding: 33px 10px;
-    }
-    &__block{
-      padding: 20px 5px;
-    }
-  }
   .results{
     &__title{
       margin-top: 0;
@@ -262,6 +201,12 @@
     }
   }
   .recomendations-info{
+    &__item{
+      width: 100%;
+      h4{
+        margin: 10px 0;
+      }
+    }
     @for $item from 1 through 5 {
       &__item:nth-child(#{$item}) {
         margin-bottom: 36px;
@@ -269,37 +214,43 @@
     }
   }
 
-  .cl-words-info__director, .cl-words-info__desc{
-    width: 100%;
-  }
+  .m-quality{
+    &-block{
+      &__desc{
+        width: 95%;
 
-  .facts-info{
-    flex-flow: column;
-    margin: 30px 0 30px 0;
-    &__item{
-      width: 100%;
-      padding: 0 10px;
-      &:last-child{
-        p{
-          padding: 0 10px;
-          margin-left: -8.5%;
-        }
+      }
+      &__image{
+        width: 100%;
       }
     }
   }
 
   .b-clients {
+    .title::after{
+      display: none;
+    }
+    &__block{
+      margin: auto;
+      width: 90%;
+    }
     &__text{
       width: 100%;
+      position: static;
       a{
         display: block;
       }
-      p:last-child{
-        margin-bottom: 20px;
+      p{
+        margin: auto;
       }
     }
     .know-form {
+      position: static;
+      margin-top: 15px;
       width: 100%;
+      .button{
+        right: 0;
+      }
       input[type="submit"]{
         margin-top: 0;
         width: 100%;
@@ -322,21 +273,23 @@
 
   .footer{
     &-container{
-      margin-top: 40px;
+      margin-top: 20px;
       flex-direction: column;
       align-items: center;
     }
-    @each $footer-item in (__logo, __address, __phone) {
-      &#{$footer-item} {
-        width: 100%;
-      }
-      @if($footer-item == __address) {
-        &#{$footer-item} {
-          margin-bottom: 0px;
-          margin-top: 10px;
-        }
+
+    &__link{
+      text-align: center;
+    }
+
+    &__quest{
+      text-align: center;
+      p{
+        text-align: center;
+        padding: 0 20px 0 20px;
       }
     }
+
     .top-button-block{
       bottom: 40px;
       .top-button{

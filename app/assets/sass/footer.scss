@@ -13,7 +13,7 @@
   }
 
   &__link{
-    font-size: 18px;
+    font-size: 17px;
     color: white;
     font-family: $headers-font-bold;
     margin-top: 15px;
@@ -25,13 +25,14 @@
       @include content-text;
       color: white;
       text-align: right;
-      font-size: 15px;
+      font-size: 17px;
       font-weight: 100;
       margin: 0;
     }
     a{
       text-align: right;
-      @include content-text;
+      font-weight: $headers-font-regular;
+      font-weight: 600;
       font-size: 17px;
       color: white;
     }

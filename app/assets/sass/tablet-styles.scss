@@ -1,26 +1,25 @@
-@media screen and (min-width: 501px) and (max-width: 900px) {
-  .btn--callback{
-    margin-left: 0px;
-    width: 50%;
-    flex: 1 50%;
-    position: relative;
-    right: 20px;
+@media screen and (min-width: 601px) and (max-width: 710px) {
+  .title{
+    font-size: 25px;
   }
-
+  .button{
+    height: auto;
+    white-space: normal;
+  }
   .content--background{
-    background: rgba(20, 20, 20, 0.81);
+    background: rgba(255,255,255, 0.83);
   }
 
-  .work-stages, .guarantees{
-    &__title{
-      font-size: 22px;
-      line-height: 25px;
-    }
+  .results, .recomendations, .b-clients, .approach, .c-marketing{
+    padding-top: 30px;
   }
 
   .nav{
     flex-flow: row wrap;
     justify-content: center;
+    .btn-callback{
+      margin-right: 10%;
+    }
     &__tel{
       margin: 10px 0 0 0;
       width: 50%;
@@ -49,11 +48,17 @@
   .header{
     &__content{
       padding: 20px 0 0 0;
+
       &-title{
         font-size: 25px;
         text-align: center;
-        line-height: 35px;
-        padding: 0 60px;
+        line-height: normal;
+        /*padding: 0 20px;*/
+      }
+
+      &-subtitle{
+        font-size: 20px;
+        /*padding: 0 10px;*/
       }
       &-text{
         text-align: center;
@@ -62,38 +67,45 @@
       }
     }
     &-content-background{
-      background: url("../images/headerbackground.png") no-repeat 100% 50%;
+      background:  url("../images/headerbackground.jpg") no-repeat 10%;
       background-size: cover;
     }
   }
 
+  .c-marketing{
+    &-desc{
+      position: relative;
+      left: 10%;
+      width: 350px;
+      &__title{
+        left: -43%;
+      }
+    }
+  }
+
   .b-clients{
+    .title{
+      &::after{
+        display: none;
+      }
+    }
+    &__block{
+      margin: auto;
+      width: 85%;
+    }
     &__text{
-      width: 100%;
+      position: static;
+      width: 80%;
+      p{
+        margin-top: 0;
+      }
     }
     .know-form{
+      position: static;
       width: 50%;
     }
   }
 
-  .wdyg {
-    padding: 40px 0;
-    &-info {
-      flex-flow: row wrap;
-      justify-content: space-around;
-      &__item {
-        width: 45%;
-      }
-    }
-  }
-
-  .key-digits{
-    .digits{
-      &__item{
-        width: 50%;
-      }
-    }
-  }
 
   .approach{
     padding-bottom: 15px;
@@ -102,21 +114,27 @@
     }
     &-types{
       background: none;
-      margin-bottom: 10px;
+      margin: 20px auto;
       &-wrapper{
         flex-flow: row wrap;
         justify-content: space-around;
       }
       &__item{
-        width: 30%;
-        @for $item from 1 through 7 {
-          &:nth-child(#{$item}) {
-            position: static;
+        width: 27%;
+        flex: none;
+        @each $pseudo in (after, before) {
+          &:nth-child(2n)::#{$pseudo}{
+            display: none;
           }
         }
+
+        &:nth-child(2n){
+          top: 0;
+        }
+
         img{
-          width: 74px;
-          height: 74px;
+          width: 64%;
+          height: 64%;
         }
       }
     }
@@ -133,27 +151,22 @@
     }
   }
 
-  .cl-words-info__director{
-    width: 35%;
-  }
-
-  .stages{
-    align-items: flex-start;
-    padding: 0;
-    &-links {
-      flex: 1 40%;
-      &__item{
-        font-size: 16px;
-        strong{
-          font-size: 20px;
+  .m-quality{
+    &-block{
+      flex-flow: column;
+      &__image{
+        width: 90%;
+        img{
+          display: block;
+          margin: auto;
         }
       }
-    }
-    &__description {
-      flex: 1 60%;
-      height: 400px;
+      &__desc{
+        width: 90%;
+      }
     }
   }
+
 
   .know-form{
     width: 100%;
@@ -176,42 +189,11 @@
     }
   }
 
-  .seo{
-    &__partitions{
-      &-items{
-        font-size: 16px;
-        display: flex;
-        img{
-          float: none;
-          padding-right: 0;
-        }
-      }
-    }
-  }
 
-  .include-materials__desc{
-    .btn{
-      white-space: normal;
-    }
-  }
 
-  .proposition{
-    &-block{
-      flex-flow: column;
-      justify-content: center;
-      align-items: center;
-      &__item{
-        margin-top: 20px;
-        width: 85%;
-        .btn{
-          white-space: normal;
-        }
-      }
-      &__item:last-child{
-        form{
-          width: 90%;
-        }
-      }
+  .results{
+    .slick-next, .slick-prev{
+      top: 40%;
     }
   }
 
@@ -241,9 +223,231 @@
     padding: 8px 28px !important;
   }
 
-  .seo__partition--2 p{
-    width: 107%;
+
+  .footer{
+    .top-button-block{
+      bottom: 40px;
+    }
   }
+}
+@media screen and (min-width: 710px) and (max-width: 1023px) {
+  .title{
+    font-size: 25px;
+  }
+  .button{
+    height: auto;
+    white-space: normal;
+  }
+  .content--background{
+    background: rgba(255,255,255, 0.83);
+  }
+
+  .results, .recomendations, .b-clients, .approach, .c-marketing{
+    padding-top: 30px;
+  }
+
+  .nav{
+    flex-flow: row wrap;
+    justify-content: center;
+    .btn-callback{
+      margin-right: 15%;
+    }
+    &__tel{
+      margin: 10px 0 0 0;
+      width: 50%;
+      text-align: center;
+      flex: 1 50%;
+      padding-left: 5px;
+      &::before{
+        left: 23%;
+      }
+    }
+    &__title{
+      text-align: center;
+      width: 50%;
+      margin-left: auto;
+      display: block;
+    }
+    &__logo{
+      width: 50%;
+      img{
+        display: block;
+        margin: auto;
+      }
+    }
+  }
+
+  .header{
+    &__content{
+      padding: 20px 0 0 0;
+
+      &-title{
+        font-size: 25px;
+        text-align: center;
+        line-height: normal;
+        padding: 0 20px;
+      }
+
+      &-subtitle{
+        font-size: 20px;
+        padding: 0 10px;
+      }
+      &-text{
+        text-align: center;
+        padding: 0 10px;
+        font-size: 25px;
+      }
+    }
+    &-content-background{
+      background:  url("../images/headerbackground.jpg") no-repeat 10%;
+      background-size: cover;
+    }
+  }
+
+  .c-marketing{
+    &-desc{
+      width: 500px;
+      &__title{
+        left: -21%;
+      }
+    }
+  }
+
+  .b-clients{
+    .title{
+      &::after{
+        right: 5%;
+      }
+    }
+    &__block{
+      margin: auto;
+      width: 85%;
+    }
+    &__text{
+      position: static;
+      width: 80%;
+      p{
+        margin-top: 0;
+      }
+    }
+    .know-form{
+      position: static;
+      width: 50%;
+    }
+  }
+
+
+  .approach{
+    padding-bottom: 15px;
+    .slick-slide{
+      height: 100%;
+    }
+    &-types{
+      background: none;
+      margin: 20px auto;
+      &-wrapper{
+        flex-flow: row wrap;
+        justify-content: space-around;
+      }
+      &__item{
+        width: 27%;
+        flex: none;
+        @each $pseudo in (after, before) {
+          &:nth-child(2n)::#{$pseudo}{
+            display: none;
+          }
+        }
+
+        &:nth-child(2n){
+          top: 0;
+        }
+
+        img{
+          width: 64%;
+          height: 64%;
+        }
+      }
+    }
+    &-slider{
+      &__nav{
+        display: none;
+      }
+      &__block{
+        width: 100%;
+      }
+      &__item{
+        height: auto;
+      }
+    }
+  }
+
+  .m-quality{
+    &-block{
+      &__image{
+        width: 40%;
+      }
+      &__desc{
+        width: 60%;
+      }
+    }
+  }
+
+
+  .know-form{
+    width: 100%;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+
+    input[type="text"]{
+      width: 60%;
+      margin-left: 0px;
+    }
+
+    input[type="button"]{
+      width: 25%;
+    }
+
+    &__title{
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+
+
+
+.results{
+  .slick-next, .slick-prev{
+    top: 40%;
+  }
+}
+
+  .results-info__item{
+    width: 50%;
+  }
+
+  .popup-overlay .popup-form{
+    width: 70%;
+  }
+
+  .popup-slider-overlay{
+    .popup-slider{
+      width: 75%;
+    }
+  }
+
+  .popup-overlay .popup-fullcase{
+    width: 98%;
+    &__close{
+      font-size: 35px;
+    }
+  }
+
+  .submit-btn{
+    margin-left: 15px !important;
+    padding: 8px 28px !important;
+  }
+
 
   .footer{
     .top-button-block{

@@ -51,12 +51,7 @@ class ModalForm extends Component{
         e.preventDefault();
         let formData = {'form-name': 'callback'};
 
-        if (this.props.formState.contract) {
-            formData['form-name'] = 'contract-order';
-            formData.email = this.refs.email.value;
-            formData.phone = this.refs.phone.mask.getValue();
-            this.props.sendCallback(formData);
-        } else if (this.props.formState.workPlan) {
+         if (this.props.formState.workPlan) {
             formData['form-name'] = 'work-plan-order';
             formData.email = this.refs.email.value;
             formData.phone = this.refs.phone.mask.getValue();
@@ -109,34 +104,8 @@ class ModalForm extends Component{
         this.props.showModal(true);
     }
 
-    bitrixShit() {
-        (function(w,d,u,b){w['Bitrix24FormObject']=b;w[b] = w[b] || function(){arguments[0].ref=u;
-                (w[b].forms=w[b].forms||[]).push(arguments[0])};
-            if(w[b]['forms']) return;
-            let s=d.createElement('script'); let r=1*new Date();s.async=1;s.src=u+'?'+r;
-            let h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
-        })(window,document,'https://gpro.bitrix24.ru/bitrix/js/crm/form_loader.js','b24form');
-
-        b24form({"id":"13","lang":"ru","sec":"b1f2od","type":"inline"});
-    }
     formVariants() {
-        if (this.props.formState.contract) {
-            return(
-                <div className="popup-form">
-                    <div className="popup-form__close" onClick={this.closeModalHandler.bind(this)}>&times;</div>
-                    <p>Чтобы получить пример договора, оставьте,  пожалуйста,  свои контактные данные</p>
-                    {this.mailNotification()}
-                    <form className="form-group" onClick={this.formClickHandler.bind(this)} onSubmit={this.btnSubmitHandler.bind(this)}>
-                        <label>Ваш Email <span>*</span></label>
-                        <input type="email" ref="email" name="email" className="form-control" required="true" placeholder="example@mail.ru"/>
-                        <label>Телефон <span>*</span></label>
-                        <MaskedInput  mask="+7(111) 111 11 11" type="text" ref="phone" name="phone" required="true" className="form-control"/>
-                        {this.personalAgreement()}
-                        <input type="submit" value='Отправить заявку' className="btn"/>
-                    </form>
-                </div>
-            )
-        } else if (this.props.formState.workPlan) {
+       if (this.props.formState.workPlan) {
             return(
                 <div className="popup-form">
                     <div className="popup-form__close" onClick={this.closeModalHandler.bind(this)}>&times;</div>
@@ -148,7 +117,7 @@ class ModalForm extends Component{
                         <label>Телефон <span>*</span></label>
                         <MaskedInput  mask="+7(111) 111 11 11" type="text" ref="phone" name="phone" required="true" className="form-control"/>
                         {this.personalAgreement()}
-                        <input type="submit" value='Отправить заявку' className="btn"/>
+                        <input type="submit" value='Отправить заявку' className="button"/>
                     </form>
                 </div>
             )
@@ -156,7 +125,7 @@ class ModalForm extends Component{
             return(
                 <div className="popup-form">
                     <div className="popup-form__close" onClick={this.closeModalHandler.bind(this)}>&times;</div>
-                    <p>Чтобы получить пример нашего отчета,  оставьте,  пожалуйста,  свои контактные данные</p>
+                    <p>Чтобы получить пример наших статей,  оставьте,  пожалуйста,  свои контактные данные</p>
                     {this.mailNotification()}
                     <form className="form-group" onClick={this.formClickHandler.bind(this)} onSubmit={this.btnSubmitHandler.bind(this)}>
                         <label>Ваш Email <span>*</span></label>
@@ -166,7 +135,7 @@ class ModalForm extends Component{
 
                         {this.personalAgreement()}
 
-                        <input type="submit" value='Отправить заявку' className="btn"/>
+                        <input type="submit" value='Отправить заявку' className="button"/>
                     </form>
                 </div>
             )
@@ -174,10 +143,18 @@ class ModalForm extends Component{
             return(
                 <div className="popup-form">
                     <div className="popup-form__close" onClick={this.closeModalHandler.bind(this)}>&times;</div>
-                    <p>Узнать сколько клиентов мы можем привести Вам на сайт</p>
-                    <script id="bx24_form_inline" data-skip-moving="true" type="text/javascript">
-                    {this.bitrixShit()}
-                    </script>
+                    <p>Заказ контент-маркетинга</p>
+                    {this.mailNotification()}
+                    <form className="form-group" onClick={this.formClickHandler.bind(this)} onSubmit={this.btnSubmitHandler.bind(this)}>
+                        <label>Как к Вам обращаться?<span>*</span></label>
+                        <input  type="text" ref="name" name="name" className="form-control" placeholder="Иванов Иван Иванович" required/>
+                        <label>Телефон <span>*</span></label>
+                        <MaskedInput  mask="+7(111) 111 11 11" type="text" ref="phone" name="phone" required="true" className="form-control"/>
+                        <label>Комментарий</label>
+                        <textarea className="form-control" name="comment" ref="comment" placeholder="Мой сайт www.mysite.ru. Прошу связаться со мной в 14:30."></textarea>
+                        {this.personalAgreement()}
+                        <input type="submit" value='Отправить заявку' className="button"/>
+                    </form>
                 </div>
             )
         } else {
@@ -194,7 +171,7 @@ class ModalForm extends Component{
                         <label>Комментарий</label>
                         <textarea className="form-control" name="comment" ref="comment" placeholder="Мой сайт www.mysite.ru. Прошу связаться со мной в 14:30."></textarea>
                         {this.personalAgreement()}
-                        <input type="submit" value='Отправить заявку' className="btn"/>
+                        <input type="submit" value='Отправить заявку' className="button"/>
                     </form>
                 </div>
             )

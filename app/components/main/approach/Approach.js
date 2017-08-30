@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import {connect} from "react-redux";
 import {bindActionCreators} from 'redux';
-import {setApproachItem} from '../../../actions'
+import {setApproachItem, showModal, workPlanShow} from '../../../actions';
 
 class Approach extends React.Component{
     constructor(props) {
@@ -12,8 +12,11 @@ class Approach extends React.Component{
         this.hoverPaginHandler = this.hoverPaginHandler.bind(this);
 
     }
-    
 
+    orderWorkPlanHandler() {
+        this.props.workPlanShow(true);
+        this.props.showModal(true);
+    }
     nextHandler() {
         this.refs.slider.slickGoTo(this.props.approachesState + 1);
         this.props.setApproachItem(this.props.approachesState + 1);
@@ -127,7 +130,7 @@ class Approach extends React.Component{
                         </div>
                         <div className="approach-slider__nav" onClick={this.nextHandler}><div className="arrow-block"><img src="images/arrow-next.svg" /></div></div>
                     </div>
-                    <button className="button button--download">СКАЧАТЬ ПРИМЕР ПЛАНА РАБОТ НА 2 МЕСЯЦА <br/> <span>PDF 2.21 МБ</span></button>
+                    <button className="button button--download" onClick={this.orderWorkPlanHandler.bind(this)}>СКАЧАТЬ ПРИМЕР ПЛАНА РАБОТ НА 2 МЕСЯЦА <br/> <span>PDF 2.21 МБ</span></button>
                 </div>
             </section>
         )
@@ -141,7 +144,7 @@ const mapStateToProps = (store) => {
 };
 
 const mapDispatchToProps = dispatch => {
-    return bindActionCreators({setApproachItem}, dispatch);
+    return bindActionCreators({setApproachItem, showModal, workPlanShow}, dispatch);
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Approach);
