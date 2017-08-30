@@ -24,7 +24,7 @@ class HeaderContent extends Component{
                     <div className="container header__content">
                         <h1 className="header__content-title">КОНТЕНТ-МАРКЕТИНГ ПОЗВОЛИТ ПОЛУЧАТЬ КЛИЕНТОВ <span>24 ЧАСА В СУТКИ</span> </h1>
                         <h3 className="header__content-subtitle">Увеличивает продажи. Помогает завоевать доверие.<br/> Ненавязчиво продвигает товары и услуги.</h3>
-                        <button className="button" onClick={this.openKnowFormHandler}>заказать контент маркетинг для своего сайта</button>
+                        <button className="button" onClick={this.openKnowFormHandler}>заказать контент-маркетинг для своего сайта</button>
                     </div>
                 </div>
             </section>
